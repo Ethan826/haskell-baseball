@@ -16,12 +16,12 @@ data Position
   | DesignatedHitter
   | PinchHitter
   | PinchRunner
-  deriving (Show)
+  deriving (Show, Eq, Ord)
 
 data HomeVisitor
   = Home
   | Visitor
-  deriving (Show)
+  deriving (Show, Eq, Ord)
 
 data Pitch
   = Ball
@@ -43,7 +43,7 @@ data Pitch
   | BallPitcherWentToMouth
   | BallInPlayByBatter
   | BallInPlayOnPitchout
-  deriving (Show)
+  deriving (Show, Eq, Ord)
 
 data BatterEvent
   = Single

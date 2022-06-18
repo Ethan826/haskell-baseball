@@ -14,7 +14,7 @@ version:            0.1.0.0
 -- The license under which the package is released.
 -- license:
 author:             Ethan Kent
-maintainer:         ekent@spoonflower.com
+maintainer:         ekent@jd11.law.harvard.edu
 
 -- A copyright notice.
 -- copyright:
@@ -28,7 +28,15 @@ executable baseball
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    other-extensions: OverloadedStrings
     build-depends:    base ^>=4.14.3.0
     hs-source-dirs:   app
+    default-language: Haskell2010
+
+Test-Suite baseball-test
+    type:             exitcode-stdio-1.0
+    main-is:          Main.hs
+    hs-source-dirs:   test, app
+    other-modules:    Count
+    build-depends:    base ^>=4.14.3.0, HUnit
     default-language: Haskell2010
