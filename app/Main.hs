@@ -24,6 +24,47 @@ data HomeVisitor
   deriving (Show)
 
 data Pitch
-  = CalledStrike
+  = Ball
+  | CalledStrike
+  | Foul
+  | HitBatter
+  | IntentionalBall
+  | StrikeUnknown
+  | FoulBunt
+  | MissedBuntAttempt
+  | NoPitch
+  | FoulTipOnBunt
+  | Pitchout
+  | SwingingOnPitchout
+  | FoulBallOnPitchout
   | SwingingStrike
+  | FoulTip
+  | UnknownPitch
+  | BallPitcherWentToMouth
+  | BallInPlayByBatter
+  | BallInPlayOnPitchout
   deriving (Show)
+
+data BatterEvent
+  = Single
+  | Double
+  | Triple
+  | HomeRun
+  | Error
+  | FieldersChoice
+  | FoulBallError
+  | HitByPitch
+  | Strikeout
+  | NoPlay
+  | IntentionalWalk
+
+data NonBatterEvent
+  = Balk
+  | CaughtStealing
+  | DefensiveIndifference
+  | OtherAdvance
+  | PassedBall
+  | WildPitch
+  | Pickoff
+  | PickoffCaughtStealing
+  | StolenBase
