@@ -1,6 +1,8 @@
+{-# LANGUAGE NamedFieldPuns #-}
+
 module Count where
 
-import Main (Pitch (..))
+import Pitch (Pitch (..))
 
 data Balls
   = BallZero
@@ -56,3 +58,10 @@ data Count = Count
   { balls :: Balls
   , strikes :: Strikes
   }
+  deriving (Show, Eq)
+
+reduceCount :: Pitch -> Count -> Either String Count
+reduceCount p Count {balls, strikes} = do
+  balls' <- reduceBalls p balls
+  strikes' <- reduceStrikes p strikes
+  pure $ Count {balls = balls', strikes = strikes'}
