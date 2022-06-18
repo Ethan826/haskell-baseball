@@ -31,13 +31,13 @@ executable baseball
     other-extensions: OverloadedStrings
     build-depends:    base ^>=4.14.3.0
     hs-source-dirs:   app
-    other-modules:    Count, Pitch
+    -- other-modules:    Count, Pitch
     default-language: Haskell2010
 
-Test-Suite baseball-test
-    type:             exitcode-stdio-1.0
-    main-is:          Main.hs
-    hs-source-dirs:   test, app
-    other-modules:    Count, Pitch
-    build-depends:    base ^>=4.14.3.0, HUnit
-    default-language: Haskell2010
+-- Test-Suite baseball-test
+--     type:             exitcode-stdio-1.0
+--     main-is:          Main.hs
+--     hs-source-dirs:   test, app
+--     other-modules:    Count, Pitch
+--     build-depends:    base ^>=4.14.3.0, HUnit
+--     default-language: Haskell2010
